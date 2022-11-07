@@ -31,14 +31,14 @@ public class Main {
         System.out.println("");
 
         // Задание 3
-        int population = 12_000_000;
-        int deathRate = 8 * 10 * 10 * 10 * 12;
-        int birthRate = 17 * 10 * 10 * 10 * 12;
+        float population = 12_000_000;
+        float deathRate = 0.008f;
+        float birthRate = 0.017f;
         int year = 2022;
 
         while (year < 2032) {
             year++;
-            population = population - deathRate + birthRate;
+            population = population + population * birthRate - population * deathRate;
             System.out.println("Год " + year + ", численность населения составляет " + population + ".");
         }
 
